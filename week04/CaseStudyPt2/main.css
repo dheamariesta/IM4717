@@ -108,3 +108,15 @@ tr:nth-of-type(odd){
   background-color: #CCAA66;
   clear:both;
 }
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+    margin-right: 15px;
+}
+input {
+  display: inline-block;
+  float: left;
+}
