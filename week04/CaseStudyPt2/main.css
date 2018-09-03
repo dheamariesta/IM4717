@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+body {
+  font-family:Verdana, Arial, sans-serif;
+  background-color: #e6d4b3;
+}
+#wrapper {
+  background-color: #e6d4b3;
+  width: 80%;
+  margin: auto;
+  min-width: 850px;
+}
+#leftcolumn {
+  float: left;
+  width: 150px;
+}
+#rightcolumn {
+  margin-left: 155px;
+  background-color: #ffffff;
+}
+header {
+  background-color: #b67a1f;
+  color: #5d2d00;
+  font-size: 150%;
+  padding: 10px;
+}
+h2 {
+  color: #869dc7;
+  font-family: arial, sans-serif;
+}
+.content {
+  padding: 20px 20px 0 20px;
+}
+#floatright {
+  margin: 10px;
+  float: right;
+}
+
+footer {
+  font-size:70%;
+  text-align: center;
+  clear: right;
+  padding-bottom:20px;
+}
+nav a {
+  margin: 30px;
+  text-decoration: none;
+  color: #c48801;
+}
+nav a:focus{
+  color: #face32;
+}
+nav a:hover {
+  text-decoration: underline;
+}
