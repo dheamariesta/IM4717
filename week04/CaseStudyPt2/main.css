@@ -111,7 +111,7 @@ tr:nth-of-type(odd){
 label{
     display: inline-block;
     float: left;
-    clear: left;
+    /* clear: left; */
     width: 250px;
     text-align: right;
     margin-right: 15px;
