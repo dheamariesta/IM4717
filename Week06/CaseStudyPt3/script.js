@@ -85,3 +85,33 @@ function checkStartDate(){
     alert("Start date cannot be today or in the past");
   }
 }
+
+function selectedMenu(){
+  var justJavaSelection = document.querySelector('input[name="just-java"]:checked').value;
+  var cafeAuLaitSelection = document.querySelector('input[name="cafe-au-lait"]:checked').value;
+  var icedCappucinoSelection = document.querySelector('input[name="iced-cappuccino"]:checked').value;
+
+  // console.log(justJavaSelection);
+  // console.log(cafeAuLaitSelection);
+  // console.log(icedCappucinoSelection);
+
+  var justJavaQuantity = document.getElementById('just-java-qty').value;
+  var cafeAuLaitQuantity = document.getElementById('cafe-au-lait-qty').value;
+  var icedCappucinoQuantity = document.getElementById('iced-cappuccino-qty').value;
+
+  // console.log(justJavaQuantity);
+  // console.log(cafeAuLaitQuantity);
+  // console.log(icedCappucinoQuantity);
+
+  var justJavaSubtotal = document.getElementById('just-java-subtotal');
+  justJavaSubtotal.value = parseFloat(justJavaSelection) * parseFloat(justJavaQuantity);
+
+  var cafeSubtotal = document.getElementById('cafe-au-lait-subtotal');
+  cafeSubtotal.value = parseFloat(cafeAuLaitSelection) * parseFloat(cafeAuLaitQuantity);
+
+  var icedCappuccinoSubtotal = document.getElementById('iced-cappuccino-subtotal');
+  icedCappuccinoSubtotal.value = parseFloat(icedCappucinoSelection) * parseFloat(icedCappucinoQuantity);
+
+
+  document.getElementById('total').value = parseFloat(justJavaSubtotal.value) + parseFloat(cafeSubtotal.value) + parseFloat(icedCappuccinoSubtotal.value);
+}
