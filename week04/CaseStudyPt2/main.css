@@ -1,5 +1,6 @@
 body {font-family:Verdana, Arial, sans-serif;
       background-color: #F1E8B0;
+      min-width: 1400px;
 }
 #wrapper { background-color: #f1d7b0;
            width: 80%;
@@ -119,4 +120,7 @@ label{
 input {
   display: inline-block;
   float: left;
+}
+footer a{
+  color: black;
 }

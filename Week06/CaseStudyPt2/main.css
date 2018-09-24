@@ -1,0 +1,126 @@
+body {font-family:Verdana, Arial, sans-serif;
+      background-color: #F1E8B0;
+      min-width: 1400px;
+}
+#wrapper { background-color: #f1d7b0;
+           width: 80%;
+		   margin: auto;
+           min-width: 850px;
+           border-shadow: 5px 5px rgb(0, 0, 0);
+}
+#leftcolumn { float: left;
+	          width: 150px;
+}
+#rightcolumn { margin-left: 155px;
+               background-color: #ffffff;
+}
+header { background-color: #CCAA66;
+        color: #996633;
+        font-size: 150%;
+        padding: 10px;
+        text-align: center;
+        text-shadow: 2px 2px #5e2d00;
+}
+h2 { color: #5e2d00;
+     font-family: Verdana, sans-serif;
+}
+.content {padding: 20px 20px 20px 20px;
+  background-color: #f5efc9;
+}
+#floatright { margin: 10px;
+             float: right;
+}
+
+footer {font-size:70%;
+         text-align: center;
+         padding:20px;
+         clear: both;
+         background-color: #CCAA66;
+}
+nav {
+  margin-top: 15px;
+}
+nav a {
+  margin: 30px;
+  text-decoration: none;
+  font-family: Verdana;
+  font-weight: bold;
+  color: #996633;
+  font-size: 20px;
+}
+#current-page {
+  color: #b5955f;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+#fall {
+  width: 40%;
+  max-width:400px;
+  min-height: 200px;
+  float: left;
+  margin-left: 100px;
+}
+#details{
+  display: inline-block;
+  margin-left: 15px;
+  width: 40%;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+ul  {
+ padding-left:0;
+}
+ul li  {
+ list-style-position:inside
+}
+th, td {
+  padding: 10px;
+  border-right: solid 3px #f5efc9;
+}
+tr:nth-of-type(odd){
+  background-color: #CCAA66;
+}
+.row{
+  width: 80%;
+  margin: auto;
+}
+.col-3{
+  width: 25%;
+  display: inline-block;
+  float: left;
+}
+.col-8{
+  width: 67%;
+  display: inline-block;
+  padding-left: 15px;
+}
+.artists{
+  width: 70%;
+  margin: auto auto;
+}
+.music{
+  width: 100%;
+}
+.month{
+  background-color: #CCAA66;
+  clear:both;
+}
+label{
+    display: inline-block;
+    float: left;
+    /* clear: left; */
+    width: 250px;
+    text-align: right;
+    margin-right: 15px;
+}
+input {
+  display: inline-block;
+  float: left;
+}
+footer a{
+  color: black;
+}

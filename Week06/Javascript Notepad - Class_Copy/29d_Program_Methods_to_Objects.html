@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<script>
+
+	function people (name, age)   // this is the constructor function which receives value of age and name
+	{
+	this.age = age;     // it takes value of age
+	this.name= name;
+	this.yearsUntilRetire= yearsleft;   // calling function "yearsleft" which will calculate the retiremnent age and no parenthesis. 
+	}
+	
+	function yearsleft()
+	{
+	var numYears = 65-this.age;     // calculate retire age
+	return numYears;                // return the value back to the calling function "yearsleft"
+	}
+	
+	var bucky = new people ("Bucky Roberst", 24);    // define the object "bucky".....and calling "people" which is a constructor function to pass value name and age
+	
+</script>
+
+</head>
+<body> 
+
+<script>
+
+	
+	document.write(bucky.yearsUntilRetire());   // it has to be under paranthesis. 
+</script>
+
+	
+	
+	
+
+</body>
+</html>

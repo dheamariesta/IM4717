@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaJam Coffee House</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<body>
+<div id="wrapper">
+  <header>
+  <img src="javajam.jpg" />
+  </header>
+  <div id="leftcolumn">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html" >Menu</a>
+      <a href="music.html">Music</a>
+      <a href="jobs.html" id="current-page">Jobs</a>
+	</nav>
+  </div>
+  <div id="rightcolumn">
+
+    <div class="content clearfix">
+      <h2>Jobs at JavaJam</h2>
+      <p>
+        Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with an asterisk *
+      </p>
+      <form method="POST" action="show_post.php">
+        <label>*Name:</label>
+        <input type="text" required name="name" id="name"/><br /><br />
+        <label>*E-mail:</label>
+        <input type="email" required name="email" id="email" onblur="validateEmail()"/><br /><br />
+        <label>Start Date:</label>
+        <input type="text" name="date" id="date" /><br /><br />
+        <label>*Experience:</label>
+        <textarea required name="experience" id="experience"></textarea><br /><br />
+        <button type="submit">Apply Now</button>
+      </form>
+
+
+
+    </div>
+
+  </div>
+  <footer>Copyright &copy; 2014 JavaJam Coffee House<br />
+    <a href="mailto:dheamariesta@chanjaya.com" target="_blank">dheamariesta@chanjaya.com</a>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
