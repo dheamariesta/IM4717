@@ -47,11 +47,41 @@ function validateEmail(){
     alert('please add @ to email');
   }
 }
+
+function allLetter(inputtxt){
+  console.log(inputtxt);
+  var letters = /^[a-zA-Z\s]*$/;
+
+  if(inputtxt.match(letters)){
+    return true;
+  }
+  else{
+    // alert("message");
+    return false;
+  }
+}
 function validateName(){
   var name = document.getElementById('name').value;
-  if (name.match(/[a-z]/i)) {
+  console.log(name);
+  if (allLetter(name)) {
     // alphabet letters found
+    console.log("correct");
+  } else {
+    alert("Name only accept letters and space");
   }
 }
 // input listener for email
 // document.getElementById('email').addEventListener('onblur', validateEmail);
+function checkStartDate(){
+  var getDate = document.getElementById('date').value;
+  // console.log(getDate);
+  // console.log(typeof(getDate));
+  var startDate = new Date(getDate);
+  var todayDate = new Date();
+  var tomorrowDate = new Date();
+  tomorrowDate.setDate(todayDate.getDate() + 1);
+  // console.log(tomorrowDate);
+  if (startDate < tomorrowDate){
+    alert("Start date cannot be today or in the past");
+  }
+}
