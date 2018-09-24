@@ -49,7 +49,7 @@ function validateEmail(){
 }
 
 function allLetter(inputtxt){
-  console.log(inputtxt);
+  // console.log(inputtxt);
   var letters = /^[a-zA-Z\s]*$/;
 
   if(inputtxt.match(letters)){
@@ -62,7 +62,7 @@ function allLetter(inputtxt){
 }
 function validateName(){
   var name = document.getElementById('name').value;
-  console.log(name);
+  // console.log(name);
   if (allLetter(name)) {
     // alphabet letters found
     console.log("correct");
@@ -114,4 +114,10 @@ function selectedMenu(){
 
 
   document.getElementById('total').value = parseFloat(justJavaSubtotal.value) + parseFloat(cafeSubtotal.value) + parseFloat(icedCappuccinoSubtotal.value);
+}
+
+function validateForm(){
+  validateName();
+  validateEmail();
+  checkStartDate();
 }
