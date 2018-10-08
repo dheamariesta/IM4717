@@ -124,3 +124,6 @@ input {
 footer a{
   color: black;
 }
+.edit{
+  display: inline-block;
+}

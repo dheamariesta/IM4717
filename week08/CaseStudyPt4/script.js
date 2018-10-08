@@ -122,17 +122,27 @@ function validateForm(){
   checkStartDate();
 }
 function editPrice(){
+
+  //EDIT JUST JAVA PRICE
   var editJustJavaPrice = document.getElementById('edit-just-java');
   if (editJustJavaPrice.checked){
-    console.log("editing now");
     var currentPrice = document.getElementById('just-java-price').innerHTML;
     document.getElementById('just-java-price').innerHTML = `<input type="text" id="editing-just-java" value="` + currentPrice + `"/>`
-    console.log();
   } else {
-    console.log("not editing now");
     var newPrice = document.getElementById('editing-just-java').value;
     document.getElementById('just-java-price').innerHTML = newPrice;
   }
 
+  //EDIT CAFE AU LAIT SINGLE PRICE
+  var editJustJavaPrice = document.getElementById('edit-just-java');
+  if (editJustJavaPrice.checked){
+    var currentPrice = document.getElementById('just-java-price').innerHTML;
+    document.getElementById('just-java-price').innerHTML = `<input type="text" id="editing-just-java" value="` + currentPrice + `"/>`
+  } else {
+    var newPrice = document.getElementById('editing-just-java').value;
+    document.getElementById('just-java-price').innerHTML = newPrice;
+  }
+
+  //EDIT CAFE AU LAIT DOUBLE PRICE
 
 }
