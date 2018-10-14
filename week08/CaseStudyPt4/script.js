@@ -134,8 +134,8 @@ function editPrice(){
   }
 
   //EDIT CAFE AU LAIT SINGLE PRICE
-  var editJustJavaPrice = document.getElementById('edit-just-java');
-  if (editJustJavaPrice.checked){
+  var editCafeAuLaitSingle = document.getElementById('edit-cafe-au-lait');
+  if (editCafeAuLaitSingle.checked){
     var currentPrice = document.getElementById('just-java-price').innerHTML;
     document.getElementById('just-java-price').innerHTML = `<input type="text" id="editing-just-java" value="` + currentPrice + `"/>`
   } else {

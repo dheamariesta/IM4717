@@ -1,0 +1,27 @@
+body{
+  font-family: 'Arial';
+}
+.row {
+  width: 100%;
+  display: flex;
+}
+.container{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+#logo{
+  height: 50px;
+  margin: 5px auto;
+}
+.col-3{
+  width: 25%;
+}
+.col-4{
+  width: 33%;
+}
+.nav{
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
