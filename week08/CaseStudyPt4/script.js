@@ -121,28 +121,87 @@ function validateForm(){
   validateEmail();
   checkStartDate();
 }
-function editPrice(){
 
+function editJustJava(){
   //EDIT JUST JAVA PRICE
   var editJustJavaPrice = document.getElementById('edit-just-java');
   if (editJustJavaPrice.checked){
     var currentPrice = document.getElementById('just-java-price').innerHTML;
     document.getElementById('just-java-price').innerHTML = `<input type="text" id="editing-just-java" value="` + currentPrice + `"/>`
   } else {
-    var newPrice = document.getElementById('editing-just-java').value;
-    document.getElementById('just-java-price').innerHTML = newPrice;
+    var newPrice = parseFloat(document.getElementById('editing-just-java').value);
+    if (isNaN(newPrice)){
+      alert("Please input number!");
+      editJustJavaPrice.checked = true;
+    } else {
+      document.getElementById('just-java-price').innerHTML = newPrice;
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", 'edit_just_java.php', true);
+
+      //Send the proper header information along with the request
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+      xhr.onreadystatechange = function() {//Call a function when the state changes.
+          if(this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+              // Request finished. Do processing here.
+          }
+      }
+      xhr.send("name=java&price=2");
+    }
+
   }
+}
+function editCafeAuLaitPrice(){
 
   //EDIT CAFE AU LAIT SINGLE PRICE
-  var editCafeAuLaitSingle = document.getElementById('edit-cafe-au-lait');
-  if (editCafeAuLaitSingle.checked){
-    var currentPrice = document.getElementById('just-java-price').innerHTML;
-    document.getElementById('just-java-price').innerHTML = `<input type="text" id="editing-just-java" value="` + currentPrice + `"/>`
+  var editCafeAuLait = document.getElementById('edit-cafe-au-lait');
+  if (editCafeAuLait.checked){
+    var currentSinglePrice = document.getElementById('cafe-au-lait-single-price').innerHTML;
+    document.getElementById('cafe-au-lait-single-price').innerHTML = `<input type="text" id="editing-cafe-au-lait-single-price" value="` + currentSinglePrice + `"/>`
+
+    var currentDoublePrice = document.getElementById('cafe-au-lait-double-price').innerHTML;
+    document.getElementById('cafe-au-lait-double-price').innerHTML = `<input type="text" id="editing-cafe-au-lait-double-price" value="` + currentDoublePrice + `"/>`
+
   } else {
-    var newPrice = document.getElementById('editing-just-java').value;
-    document.getElementById('just-java-price').innerHTML = newPrice;
+    var newSinglePrice = parseFloat(document.getElementById('editing-cafe-au-lait-single-price').value);
+    var newDoublePrice = parseFloat(document.getElementById('editing-cafe-au-lait-double-price').value);
+
+
+    if (isNaN(newSinglePrice) || isNaN(newDoublePrice)){
+      alert("Please input number!");
+      editCafeAuLait.checked = true;
+    } else {
+      document.getElementById('cafe-au-lait-single-price').innerHTML = newSinglePrice;
+      document.getElementById('cafe-au-lait-double-price').innerHTML = newDoublePrice;
+    }
   }
 
   //EDIT CAFE AU LAIT DOUBLE PRICE
+
+}
+
+function editIcedCappuccinoPrice(){
+  var editCappuccino = document.getElementById('edit-cappuccino');
+  if (editCappuccino.checked){
+    var currentSinglePrice = document.getElementById('cappuccino-single-price').innerHTML;
+    document.getElementById('cappuccino-single-price').innerHTML = `<input type="text" id="editing-cappuccino-single-price" value="` + currentSinglePrice + `"/>`
+
+    var currentDoublePrice = document.getElementById('cappuccino-double-price').innerHTML;
+    document.getElementById('cappuccino-double-price').innerHTML = `<input type="text" id="editing-cappuccino-double-price" value="` + currentDoublePrice + `"/>`
+
+  } else {
+    var newSinglePrice = parseFloat(document.getElementById('editing-cappuccino-single-price').value);
+    var newDoublePrice = parseFloat(document.getElementById('editing-cappuccino-double-price').value);
+
+
+    if (isNaN(newSinglePrice) || isNaN(newDoublePrice)){
+      alert("Please input number!");
+      editCappuccino.checked = true;
+    } else {
+      document.getElementById('cappuccino-single-price').innerHTML = newSinglePrice;
+      document.getElementById('cappuccino-double-price').innerHTML = newDoublePrice;
+    }
+  }
 
 }

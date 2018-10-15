@@ -4,7 +4,9 @@
 <title>JavaJam Coffee House</title>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="main.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="script.js"></script>
+
 </head>
 <body>
 <div id="wrapper">
@@ -35,7 +37,7 @@
         </tr>
         <tr>
           <th>
-            <input type="checkbox" name="edit-just-java"  id="edit-just-java" onchange="editPrice()"/>
+            <input type="checkbox" name="edit-just-java"  id="edit-just-java" onchange="editJustJava()"/>
           </th>
           <th>
             Just Java
@@ -50,7 +52,7 @@
         </tr>
         <tr>
           <th>
-            <input type="checkbox" id="edit-cafe-au-lait"/>
+            <input type="checkbox" id="edit-cafe-au-lait" onchange="editCafeAuLaitPrice()"/>
           </th>
           <th>
             Cafe au Lait
@@ -60,7 +62,10 @@
 
             Single $<div class="edit" id="cafe-au-lait-single-price">
               2.00
-            </div><br />Double $3.00
+            </div><br />
+            Double $<div class="edit" id="cafe-au-lait-double-price">
+              3.00
+            </div>
 
 
           </td>
@@ -68,7 +73,7 @@
         </tr>
         <tr>
           <th>
-            <input type="checkbox" />
+            <input type="checkbox" id="edit-cappuccino" onchange="editIcedCappuccinoPrice()"/>
           </th>
           <th>
             Iced Cappuccino
@@ -76,9 +81,15 @@
           <td>
             Sweetened espresso blended with icy-cold milk and served in a chilled
             <br />
+            Single $<div class="edit" id="cappuccino-single-price">
+              4.75
+            </div>
+            <br />
 
 
-            Double $5.75
+            Double $<div class="edit" id="cappuccino-double-price">
+              5.75
+            </div>
 
 
           </td>
