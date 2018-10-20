@@ -134,20 +134,23 @@ function editJustJava(){
       alert("Please input number!");
       editJustJavaPrice.checked = true;
     } else {
+      document.getElementById('hidden-price').value = newPrice;
       document.getElementById('just-java-price').innerHTML = newPrice;
+      document.getElementById('jsform').submit();
 
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", 'edit_just_java.php', true);
+      // var request = $.ajax({
+      //   url: "edit_just_java.php",
+      //   method: "POST",
+      //   data: { name : "Just Java", price: newPrice },
+      //   dataType: "html"
+      // });
+      //
+      // request.done(function( msg ) {
+      //   console.log(msg);
+      //   $( "#error" ).html( msg );
+      // });
 
-      //Send the proper header information along with the request
-      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-      xhr.onreadystatechange = function() {//Call a function when the state changes.
-          if(this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-              // Request finished. Do processing here.
-          }
-      }
-      xhr.send("name=java&price=2");
     }
 
   }
@@ -174,6 +177,11 @@ function editCafeAuLaitPrice(){
     } else {
       document.getElementById('cafe-au-lait-single-price').innerHTML = newSinglePrice;
       document.getElementById('cafe-au-lait-double-price').innerHTML = newDoublePrice;
+
+      document.getElementById('cafe_single_price').value = newSinglePrice;
+      document.getElementById('cafe_double_price').value = newDoublePrice;
+      document.getElementById('jsform').submit();
+
     }
   }
 
@@ -201,7 +209,22 @@ function editIcedCappuccinoPrice(){
     } else {
       document.getElementById('cappuccino-single-price').innerHTML = newSinglePrice;
       document.getElementById('cappuccino-double-price').innerHTML = newDoublePrice;
+
+      document.getElementById('iced_single_price').value = newSinglePrice;
+      document.getElementById('iced_double_price').value = newDoublePrice;
+      document.getElementById('jsform').submit();
     }
   }
 
 }
+
+// $( document ).ready(function() {
+//   var request = $.ajax({
+//     url: "get_price.php",
+//     method: "GET"
+//   });
+//
+//   request.done(function( msg ) {
+//     console.log(msg);
+//   });
+// });

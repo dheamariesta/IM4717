@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaJam Coffee House</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="main.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</head>
+<body>
+
+
+  <script>
+    function goTotalSales(){
+      if (document.getElementById('total-sales').checked){
+        window.location.href="total_sales.php";
+        document.getElementById('total-sales').checked = false;
+
+      }
+    }
+    function goSalesQuantity(){
+      if (document.getElementById('sales-quantity').checked){
+        window.location.href="total_quantity.php";
+        document.getElementById('sales-quantity').checked = false;
+      }
+    }
+  </script>
+
+
+<div id="wrapper">
+  <header>
+  <img src="javajam.jpg" />
+  </header>
+  <div id="leftcolumn">
+    <nav>
+      Daily Sales Report
+  	</nav>
+  </div>
+  <div id="rightcolumn">
+
+    <div class="content clearfix">
+      <h2>Click to generate daily sales report</h2>
+      <input id="total-sales" type="checkbox" onchange="goTotalSales()"/>Total dollar sales by product
+      <br />
+      <input id="sales-quantity" type="checkbox" onchange="goSalesQuantity()"/>Sales quantity by product categories
+
+    </div>
+
+  </div>
+  <footer>Copyright &copy; 2014 JavaJam Coffee House<br />
+    <a href="mailto:dheamariesta@chanjaya.com" target="_blank">dheamariesta@chanjaya.com</a>
+  </footer>
+</div>
+</body>
+</html>
