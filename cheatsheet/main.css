@@ -1,0 +1,160 @@
+/* DESCENDANT SELECTOR */
+p strong {
+
+}
+#fancy span {
+
+}
+
+/* COMBINE CLASS SELECTOR */
+ul.important {
+  /* selects all ul elements that have class="important" */
+}
+
+/* COMMA COMBINATOR */
+p, .fun {
+
+}
+
+/* THE UNIVERSAL SELECTOR */
+p * {
+  /* selects every element inside all p elements. */
+}
+* {
+
+}
+ul.fancy * {
+  /* selects every element inside all ul class="fancy" elements.   */
+}
+
+/* ADJACENT SIBLING SELECTOR */
+p + .intro {
+  /* selects every element with class="intro" that directly follows a p */
+}
+div + a {
+  /* selects every a element that directly follows a div */
+}
+
+/* GENERAL SIBLING SELECTOR */
+A ~ B {
+  /* selects all B that follow a A */
+}
+
+/* CHILD SELECTOR */
+A > B {
+  /* selects all B that are a direct children A */
+}
+
+/* ONLY CHILD PSEUDO SELECTOR */
+ul li:only-child {
+  /* selects the only li element that are in a ul. */
+}
+span:only-child {
+  /* selects the span elements that are the only child of some other element. */
+}
+
+/* LAST CHILD PSEUDO SELECTOR */
+span:last-child {
+  /* selects all last-child span elements. */
+}
+ul li:last-child {
+  /* selects the last li elements inside of any ul. */
+}
+
+/* NTH CHILD PSEUDO SELECTOR */
+:nth-child(8) {
+  /* selects every element that is the 8th child of another element. */
+}
+div p:nth-child(2) {
+  /* selects the second p in every div */
+}
+
+/* NTH LAST CHILD SELECTOR */
+:nth-last-child(2) {
+  /* selects all second-to-last child elements. */
+}
+
+/* FIRST OF TYPE SELECTOR */
+span:first-of-type {
+  /* selects the first span in any element */
+}
+
+/* NTH OF TYPE SELECTOR */
+div:nth-of-type(2) {
+  /* selects the second instance of a div. */
+}
+.example:nth-of-type(odd) {
+  /* selects all odd instances of a the example class. */
+}
+
+/* NTH OF TYPE SELECTOR WITH FORMULA */
+span:nth-of-type(6n+2) {
+  /* selects every 6th instance of a span, starting from (and including) the second instance. */
+}
+
+/* ONLY OF TYPE SELECTOR */
+p span:only-of-type {
+  /* selects a span within any p if it is the only span in there. */
+}
+
+/* LAST OF TYPE SELECTOR */
+div:last-of-type {
+  /* selects the last div in every element. */
+}
+p span:last-of-type {
+  /* selects the last span in every p. */
+}
+
+/* EMPTY SELECTOR */
+div:empty {
+  /* selects all empty div elements. */
+}
+
+/* NEGATION PSEUDO-CLASS */
+:not(#fancy) {
+  /* selects all elements that do not have id="fancy". */
+}
+div:not(:first-child) {
+  /* selects every div that is not a first child. */
+}
+:not(.big, .medium) {
+  /* selects all elements that do not have class="big" or class="medium". */
+}
+
+/* ATTRIBUTE SELECTOR */
+a[href] {
+  /* selects all a elements that have a href="anything" attribute. */
+}
+[type] {
+  /* selects all elements that have a type="anything". attribute */
+}
+[value] {
+  /* selects all elements that have a value="anything" attribute. */
+}
+a[href] {
+  /* selects all a elements that have a href="anything" attribute. */
+}
+input[disabled] {
+  /* selects all input elements with the disabled attribute */
+}
+input[type="checkbox"] {
+  /* selects all checkbox input elements. */
+}
+
+/* ATTRIBUTE STARTS WITH SELECTOR */
+.toy[category^="Swim"] {
+  /* selects elements with class toy and either category="Swimwear or category="Swimming". */
+}
+
+/* ATTRIBUTE ENDS WITH SELECTOR */
+img[src$=".jpg"] {
+  /* selects all images display a .jpg image. */
+}
+
+/* ATTRIBUTE WILD CARD SELECTOR */
+img[src*="/thumbnails/"] {
+  /* selects all image elements that show images from the "thumbnails" folder. */
+}
+[class*="heading"] {
+  /* selects all elements with "heading" in their class, like class="main-heading" and class="sub-heading" */
+}
